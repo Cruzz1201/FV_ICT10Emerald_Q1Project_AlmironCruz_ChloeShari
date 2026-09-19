@@ -24,12 +24,9 @@
             font-optical-sizing: auto;
         }
 
-        
 
         .footer {
             position: fixed;
-            left: 0;
-            bottom: 0;
             width: 100%;
             background-color:rgba(121, 78, 43, 0.596);
             color: #ffffff;
@@ -42,7 +39,7 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:  rgba(166, 117, 60, 0.737);">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:  rgba(150, 121, 105, 0.598);">
         <div class="container-fluid">
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
@@ -64,79 +61,81 @@
         </div>
     </nav>
 
-    <div class="container" style="background-color: #ffffff93; border-radius: 10px; text-align: center; margin-top: 25px; width: 580px;">
+    <div class="container" style="background-color: #ffffff93; border-radius: 10px; text-align: center; margin-top: 25px; width: 580px; height: 490px;">
 
         <br>
 
         <h3 style="color: rgb(0, 53, 0);"><b>Receipt Generator</b></h3>
 
-        <p style="text-align: center; margin-top: 30px; color: rgb(82, 62, 55);"><b>⍝ʕ´•ᴥ•`ʔ⍝</b></p>
+        <p style="text-align: center; margin-top: 30px; color: rgb(82, 62, 55);"><b>Includes 12% VAT ⍝ʕ´•ᴥ•`ʔ⍝</b></p>
 
-        <details class="ontoggle" style="color: rgb(5, 48, 5);">
-        <summary><b>What to do..?</b></summary>
-                <p id="explain"></p>
-        </details>
+        <div class="container" style="background-color: rgba(45, 69, 45, 0.516); border-radius: 10px; width: 560px; height: 330px; text-align: left; color: white;">
 
-        <br>
-
-    
-
-        <div class="container" style="background-color: rgba(45, 69, 45, 0.516); border-radius: 10px; width: 560px; text-align: left; color: white;">
+            <br>
 
             <h4 style="color: white;">⫶☰ Menu</h4>
+            <form>
 
-            <input type="checkbox" value= 159.0 id="option1">
-            <label id="option1-label">Sea Salt Caramel Latte</label>
+                <div id="checkbox-items">
+
+                    <input type="checkbox" value= 159.0 id="option1">
+                    <label id="option1-label">Sea Salt Caramel Latte ─────────────────────── ₱159.0</label>
+
+                    <br>
+                            
+                    <input type="checkbox" value=130.0 id="option2">
+                    <label id="option2-label">Beare Frappucino ───────────────────────────── ₱130.0</label>
+
+                    <br>
+
+                    <input type="checkbox" value=145.0 id="option3">
+                    <label id="option3-label">Brewster's Espresso ────────────────────────── ₱145.0</label>
+
+                    <br>
+
+                    <input type="checkbox" value=155.0  id="option4">
+                    <label id="option4-label">Acai Smoothie ──────────────────────────────── ₱155.0</label>
+
+                    <br>
+
+                    <input type="checkbox" value=189.8  id="option5">
+                    <label id="option5-label">Unicorn Frappucino ─────────────────────────── ₱189.0</label>
+
+                    <br>
+
+                    <input type="checkbox" value=167.0 id="option6">
+                    <label id="option6-label">Minions Banana Milkshake ───────────────────── ₱167.0</label>
+
+                    <br><br>
+
+                    <div class="row" style="align-items: center;">
+                        <button type="button" py-click="compute" style="background-color: rgb(0, 59, 0); color: white; width:450px; text-align: center; border-radius: 5px; border: inset; margin-left: 10px;">Create Order ⌯⌲</button>
+
+
+                        <button type="reset" style="color: rgb(162, 162, 162); font-size: small; background-color: #ffffff00; width: 90px; margin-left: 5px;" >Clear</button>
+
+                    </div>
+
+                </div>
+
+            </form>
 
             <br>
-                    
-            <input type="checkbox" value=130.0 id="option2">
-            <label id="option2-label">Beare Frappucino</label>
 
-            <br>
+            <div id="compute" style="color:#322f2c; font-size: 16px; text-align: center;"> 
 
-            <input type="checkbox" value=145.0 id="option3">
-            <label id="option3-label">Brewster's Espresso</label>
-
-            <br>
-
-            <input type="checkbox" value=155.0  id="option4">
-            <label id="option4-label">Acai Smoothie</label>
-
-            <br>
-
-            <input type="checkbox" value=189.8  id="option5">
-            <label id="option5-label">Unicorn Frappucino</label>
-
-            <br>
-
-            <input type="checkbox" value=167.0 id="option5">
-            <label id="option5-label">Minions Banana Milkshake</label>
-
-            <br><br>
-
-            <button type="button" py-click="compute">Compute</button>
+                <p style="color: rgb(213, 210, 210); font-size: x-small; text-align: center;">Your order summary will appear here.</p>
+                
+                <py-script src="main.py"></py-script>
             
-            <br><br>
-
+            </div>
+            
         </div>
-
-        <div id="compute" style="color:#284a38; font-size: 20px;"></div>
-        <py-script src="main.py"></py-script>
-
     </div>
-
-
-
-    
 
     <div class="footer">
         <p><b>10-EMERALD | Created by: Chloe Almiron & Shari Cruz | AY 2026 - 2027</b></p>
     </div>
-
-    <script>
-        document.getElementById("explain").innerHTML = "Simply select  your desired drink and wait for the receipt.";
-    </script>
 
 </body>
 </html>
