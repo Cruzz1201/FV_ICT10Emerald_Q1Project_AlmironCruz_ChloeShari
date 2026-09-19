@@ -11,14 +11,20 @@
     <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
     <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>    
 
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Jersey+10&family=Mystery+Quest&display=swap" rel="stylesheet">
+
     <style>
 
         body{
             background-image: url('https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/429/881/datas/original.gif');
             background-repeat: no-repeat;
             background-size: cover;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+            margin-top: 10px;
+            font-family: "Cascadia Code", sans-serif;
+            font-optical-sizing: auto;
         }
+
+        
 
         .footer {
             position: fixed;
@@ -58,33 +64,78 @@
         </div>
     </nav>
 
-    <div>
-        <div class="container" style="background-color: #ffffff4c; border-radius: 10px; text-align: center;">
+    <div class="container" style="background-color: #ffffff93; border-radius: 10px; text-align: center; margin-top: 25px; width: 580px;">
 
-            <h3>Receipt Generator</h3>
+        <br>
 
-            <details class="ontoggle">
-                <summary><b>Get Started!</b></summary>
-                    <p id="explain"></p>
-            </details>
+        <h3 style="color: rgb(0, 53, 0);"><b>Receipt Generator</b></h3>
+
+        <p style="text-align: center; margin-top: 30px; color: rgb(82, 62, 55);"><b>⍝ʕ´•ᴥ•`ʔ⍝</b></p>
+
+        <details class="ontoggle" style="color: rgb(5, 48, 5);">
+        <summary><b>What to do..?</b></summary>
+                <p id="explain"></p>
+        </details>
+
+        <br>
+
+    
+
+        <div class="container" style="background-color: rgba(45, 69, 45, 0.516); border-radius: 10px; width: 560px; text-align: left; color: white;">
+
+            <h4 style="color: white;">⫶☰ Menu</h4>
+
+            <input type="checkbox" value= 159.0 id="option1">
+            <label id="option1-label">Sea Salt Caramel Latte</label>
+
+            <br>
+                    
+            <input type="checkbox" value=130.0 id="option2">
+            <label id="option2-label">Beare Frappucino</label>
+
+            <br>
+
+            <input type="checkbox" value=145.0 id="option3">
+            <label id="option3-label">Brewster's Espresso</label>
+
+            <br>
+
+            <input type="checkbox" value=155.0  id="option4">
+            <label id="option4-label">Acai Smoothie</label>
+
+            <br>
+
+            <input type="checkbox" value=189.8  id="option5">
+            <label id="option5-label">Unicorn Frappucino</label>
+
+            <br>
+
+            <input type="checkbox" value=167.0 id="option5">
+            <label id="option5-label">Minions Banana Milkshake</label>
 
             <br><br>
 
+            <button type="button" py-click="compute">Compute</button>
             
-
-
-
-
+            <br><br>
 
         </div>
+
+        <div id="compute" style="color:#284a38; font-size: 20px;"></div>
+        <py-script src="main.py"></py-script>
+
     </div>
+
+
+
+    
 
     <div class="footer">
         <p><b>10-EMERALD | Created by: Chloe Almiron & Shari Cruz | AY 2026 - 2027</b></p>
     </div>
 
     <script>
-        document.getElementById("explain").innerHTML = "This is a basic receipt generator, where we would automatically compute your order right away.";
+        document.getElementById("explain").innerHTML = "Simply select  your desired drink and wait for the receipt.";
     </script>
 
 </body>
