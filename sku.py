@@ -12,7 +12,7 @@ def sku_generator(e):
 
     #Use the first three letters
     category_code = category[0:3].upper()
-    products_code = products[0:3].upper()
+    products_code = products[0:4].upper()
 
     #generate the SKU
     FinalSKU = category_code + "-" + products_code + "-" + stock
